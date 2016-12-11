@@ -13,8 +13,6 @@ install:
   - "SET PATH=C:\\Python35;C:\\Python35\\Scripts;%PATH%"
   - ps: Write-Output "Build Number $($env:APPVEYOR_BUILD_NUMBER)"
   - ps: Write-Output "Build Version $($env:APPVEYOR_BUILD_VERSION)"
-  - ps: python -m pip install --upgrade pip
-  - ps: pip install virtualenv
   - ps: .\build.ps1
 #  - ps: appveyor PushArtifact ((ls *.nupkg).FullName)
 
