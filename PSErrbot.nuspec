@@ -10,8 +10,8 @@
     </metadata>
     <files> 
         <file src="data\**" target="data" />
-        <file src="errbot\**" target="errbot" />
         <file src="plugins\**" target="plugins" />
         <file src="*.py" target="" />
+        <file src="requirements.txt" target="" />
     </files> 
 </package>
