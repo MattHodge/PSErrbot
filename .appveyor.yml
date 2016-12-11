@@ -10,14 +10,12 @@ skip_commits:
 os: "WMF 5"
 
 install:
+  - "SET PATH=C:\\Python35;C:\\Python35\\Scripts;%PATH%"
   - ps: Write-Output "Build Number $($env:APPVEYOR_BUILD_NUMBER)"
   - ps: Write-Output "Build Version $($env:APPVEYOR_BUILD_VERSION)"
+  - ps: python -m pip install --upgrade pip
   - ps: pip install virtualenv
-  - ps: virtualenv errbot
-  - ps: .\errbot\Scripts\activate.ps1
-  - ps: pip install -r requirements.txt
-  - "SET PATH=C:\\Python35;C:\\Python35\\Scripts;%PATH%"
-  - ps: nuget pack
+  - ps: .\build.ps1
 #  - ps: appveyor PushArtifact ((ls *.nupkg).FullName)
 
 build: false
