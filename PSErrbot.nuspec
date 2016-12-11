@@ -6,6 +6,12 @@
         <authors>Matthew Hodgkins (@matthodge)</authors>
         <owners>Matthew Hodgkins</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Test Bot based on Errbot</description>
+        <description>PowerShell Test Bot based on Errbot</description>
     </metadata>
+    <files> 
+        <file src="data\**" target="data" />
+        <file src="errbot\**" target="errbot" />
+        <file src="plugins\**" target="plugins" />
+        <file src="*.py" target="" />
+    </files> 
 </package>

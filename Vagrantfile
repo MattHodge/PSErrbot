@@ -28,11 +28,15 @@ SCRIPT
     installerrbot = <<SCRIPT
         if (!(Get-Service -Name errbot -ErrorAction SilentlyContinue))
         {
+            pip install virtualenv
             cd C:\\bot
+            virtualenv errbot
+            .\\errbot\\Scripts\\activate.ps1
             $env:Path += ";C:\\Program Files\\Git\\bin;C:\\Python35\\Scripts"
             pip install -r requirements.txt
             New-Item -Type Directory -Path 'C:\\bot\\data' -Force
-            nssm install errbot C:\\Python35\\Scripts\\errbot.exe -c C:\\bot\\config.py
+            nssm install errbot C:\\bot\\errbot\\Scripts\\errbot.exe -c C:\\bot\\config.py
+            # nssm install errbot C:\\Python35\\Scripts\\errbot.exe -c C:\\bot\\config.py
             nssm set errbot AppDirectory C:\\bot\\
             Start-Service -Name errbot
         }
