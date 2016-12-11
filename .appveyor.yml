@@ -24,7 +24,7 @@ build: false
 
 artifacts:
   # Archive the generated packages in the ci.appveyor.com build report.
-  - path: *.nupkg
+  - path: '*.nupkg'
 
 # before_test:
 #   - ps: .\build.ps1
