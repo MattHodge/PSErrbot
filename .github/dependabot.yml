@@ -1,0 +1,15 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: cffi
+    versions:
+    - 1.14.4
+  - dependency-name: websocket-client
+    versions:
+    - 0.57.0
