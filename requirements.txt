@@ -11,7 +11,7 @@ errbot==6.0.0
 idna==2.1
 Jinja2==2.10.1
 Markdown==2.6.7
-MarkupSafe==0.23
+MarkupSafe==2.0.1
 ntlm-auth==1.0.2
 ordereddict==1.1
 pyasn1==0.4.5
